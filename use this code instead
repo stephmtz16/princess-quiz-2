@@ -1,0 +1,88 @@
+#include <iostream>//library
+using namespace std;//cheat code that helps iostream
+
+int main() {//starting point
+	//variable for each outcome and user input
+	int rose = 0;
+	int sunflower = 0;
+	int tulip = 0;
+	int lily = 0;
+	char input;//user input
+
+	//question 1:
+
+	cout << "whats your favorite color? " << endl;
+	cout << "r- red, y- yellow, w- white, p- purple " << endl;
+	cin >> input;
+	if (input == 'r')// users options 
+		rose+=5;//adds points to the option given
+	else if (input == 'y')
+		sunflower+=3;
+	else if (input == 'w')
+		tulip+=2;
+	else if (input == 'p')
+		lily+=4;
+
+	//question 2:
+
+	cout << "What's your favorite season? " << endl;//add 5 more questions here!
+	cout << "w-winter, f-fall, s-summer, p-spring" << endl;
+	cin >> input;
+	if (input == 'w')
+		tulip+=3;
+	else if (input == 'f')
+		lily+=4;
+	else if (input == 's')
+		sunflower+=5;
+	else if (input == 'p')
+		rose+=5;
+
+	//queston 3
+
+	cout << "hydrated or dehydrated? " << endl;
+	cout << "d-dehydrated h-hydrated" << endl;
+	cin >> input;
+	if (input == 'h')
+		lily+=5;
+	else if (input == 'd')
+		rose+=5;
+
+	//question 4
+	cout << "What Earth Element Are You? " << endl;
+	cout << "f-fire, e-earth, w-water, a-air" << endl;
+	cin >> input;
+	if (input == 'f')
+		rose+=6;
+	else if (input == 'e')
+		lily+=7;
+	else if (input == 'w')
+		tulip+=8;
+	else if (input == 'a')
+		sunflower+=8;
+	//question 5 
+	cout << "What is your favorite scent? " << endl;
+	cout << "c-Cherry blossom trees, l-clean linen, h-hawaii island, a-lavendar" << endl;
+	cin >> input;
+	if (input == 'c')
+		tulip+=3;
+	else if (input == 'l')
+		rose+=3;
+	else if (input == 'h')
+		sunflower+=2;
+	else if (input == 'a')
+		lily+=2;
+	//final score, adds up the winning statement
+
+	if (rose >= sunflower && rose >= tulip && rose >= lily) 
+		cout << "You are rose !!" << endl;
+
+	else if (sunflower >= rose && sunflower >= tulip && sunflower >= lily)
+		cout << "You are sunflower !!" << endl;
+
+	else if (tulip >= sunflower && tulip >= rose && tulip >= lily)
+		cout << "You are tulip !!" << endl;
+
+	else 
+		cout << "You are lily !!" << endl;
+
+}//ending point
